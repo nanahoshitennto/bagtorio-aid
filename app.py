@@ -23,9 +23,7 @@ def question(qid):
         return "質問が見つかりません", 404
 
     if "result" in current:
-        # resultが指定された場合はテンプレートへメッセージを渡す
-        result_message = current["result"]
-        return render_template("result.html", result_message=result_message)
+        return render_template("result.html", result=current["result"])
 
     return render_template("question.html", qid=qid, question=current["question"], options=current["options"])
 

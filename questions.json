@@ -2,44 +2,24 @@
   "start": {
     "question": "どのようなお悩みがありますか？",
     "options": [
-      {
-        "text": "髭の脱毛を検討している",
-        "next": "beard_area"
-      },
-      {
-        "text": "体のムダ毛が気になる",
-        "next": "body_area"
-      },
-      {
-        "text": "脱毛費用について知りたい",
-        "next": "price_info"
-      }
+      { "text": "髭の脱毛を検討している", "next": "beard_area" },
+      { "text": "体のムダ毛が気になる", "next": "body_area" },
+      { "text": "脱毛費用について知りたい", "next": "price_info" },
+      { "text": "レーザー脱毛について知りたい", "next": "faq_laser" }
     ]
   },
   "beard_area": {
     "question": "毎日の髭剃りが面倒だと感じていますか？",
     "options": [
-      {
-        "text": "はい",
-        "next": "beard_try_before"
-      },
-      {
-        "text": "いいえ",
-        "next": "end_beard"
-      }
+      { "text": "はい", "next": "beard_try_before" },
+      { "text": "いいえ", "next": "end_beard" }
     ]
   },
   "beard_try_before": {
     "question": "これまでにレーザー脱毛を受けたことはありますか？",
     "options": [
-      {
-        "text": "ある",
-        "next": "beard_experience"
-      },
-      {
-        "text": "ない",
-        "next": "beard_recommend"
-      }
+      { "text": "ある", "next": "beard_experience" },
+      { "text": "ない", "next": "beard_recommend" }
     ]
   },
   "beard_experience": {
@@ -54,18 +34,9 @@
   "body_area": {
     "question": "どの部位の脱毛に興味がありますか？",
     "options": [
-      {
-        "text": "胸・腹",
-        "next": "body_recommend"
-      },
-      {
-        "text": "脚・腕",
-        "next": "body_recommend"
-      },
-      {
-        "text": "VIO・お尻",
-        "next": "body_vio"
-      }
+      { "text": "胸・腹", "next": "body_recommend" },
+      { "text": "脚・腕", "next": "body_recommend" },
+      { "text": "VIO・お尻", "next": "body_vio" }
     ]
   },
   "body_recommend": {
@@ -77,27 +48,72 @@
   "price_info": {
     "question": "知りたい脱毛料金の部位を選んでください。",
     "options": [
-      {
-        "text": "ヒゲ脱毛",
-        "next": "price_beard"
-      },
-      {
-        "text": "体の脱毛",
-        "next": "price_body"
-      },
-      {
-        "text": "VIO脱毛",
-        "next": "price_vio"
-      }
+      { "text": "ヒゲ脱毛", "next": "price_beard" },
+      { "text": "もみあげ・頬", "next": "price_cheek" },
+      { "text": "首", "next": "price_neck" },
+      { "text": "Sパーツ", "next": "price_sparts" },
+      { "text": "Lパーツ", "next": "price_lparts" },
+      { "text": "両脇", "next": "price_armpit" },
+      { "text": "フェイス", "next": "price_face" },
+      { "text": "手足すっきりセット", "next": "price_limbs" },
+      { "text": "全身（顔・VIO除く）", "next": "price_fullbody" },
+      { "text": "コンプリート全身（VIO除く）", "next": "price_complete" },
+      { "text": "VIO脱毛", "next": "price_vio" }
     ]
   },
   "price_beard": {
     "result": "【ヒゲ脱毛】5回：52,800円（税込）、10回：99,000円（税込）。<br>単回：11,000円。"
   },
-  "price_body": {
-    "result": "【体の脱毛】部位により異なります（例：胸部1回8,800円〜）。<br>詳しくは公式HPへ。"
+  "price_cheek": {
+    "result": "【もみあげ・頬】1回：10,980円｜3回：22,180円｜6回：33,390円"
+  },
+  "price_neck": {
+    "result": "【首】1回：6,800円｜3回：19,510円｜6回：32,210円"
+  },
+  "price_sparts": {
+    "result": "【Sパーツ】1回：6,800円｜3回：19,510円｜6回：32,210円"
+  },
+  "price_lparts": {
+    "result": "【Lパーツ】1回：19,510円｜3回：55,660円｜6回：90,750円"
+  },
+  "price_armpit": {
+    "result": "【両脇】1回：1,680円｜3回：4,620円｜6回：9,080円"
+  },
+  "price_face": {
+    "result": "【フェイス】1回：12,710円｜3回：34,490円｜6回：55,660円"
+  },
+  "price_limbs": {
+    "result": "【手足すっきりセット】1回：44,590円｜3回：127,050円｜6回：235,270円"
+  },
+  "price_fullbody": {
+    "result": "【全身（顔・VIO除く）】1回：55,800円｜3回：164,700円｜6回：322,670円"
+  },
+  "price_complete": {
+    "result": "【コンプリート全身（VIO除く）】1回：66,990円｜3回：199,420円｜6回：389,890円"
   },
   "price_vio": {
-    "result": "【VIO脱毛】1回：16,500円、5回：66,000円（税込）。<br>詳細は無料カウンセリングへ。"
+    "result": "【VIO脱毛】トライアル：25,800円｜1回：46,800円｜5回：153,800円<br>【Vのみ】1回：19,800円｜5回：68,800円<br>【Iのみ】1回：13,800円｜5回：48,800円<br>【Oのみ】1回：13,800円｜5回：48,800円"
+  },
+  "faq_laser": {
+    "question": "どの情報が知りたいですか？",
+    "options": [
+      { "text": "レーザー脱毛とは？", "next": "faq_laser_what" },
+      { "text": "Sパーツの部位", "next": "faq_sparts" },
+      { "text": "Lパーツの部位", "next": "faq_lparts" },
+      { "text": "副作用・リスク", "next": "faq_risks" },
+      { "text": "最初に戻る", "next": "start" }
+    ]
+  },
+  "faq_laser_what": {
+    "result": "医療レーザー脱毛は病院で処置を行い、レーザー出力を患者様に合わせて調整して施術します。痛みが心配な方には麻酔クリームも使用可能です。メラニンに反応する波長のレーザーで、毛の毛隆起（buldge）を破壊します。当院ではGentle Max Pro, Gentle Max Pro Plus, Elite iQを使用しています（2024年9月現在）。"
+  },
+  "faq_sparts": {
+    "result": "Sパーツには以下が含まれます：うなじ・額・鼻下（上口ひげ）・顎・顎下・首・手の甲、指・乳輪周囲・へそ下・鼠蹊部・Vライン・Oライン・膝小僧・足の甲、指・頬（※眉毛・髪の毛周囲は0.5cm以上空けて照射）。"
+  },
+  "faq_lparts": {
+    "result": "Lパーツには以下が含まれます：肘上・肘下・膝上・膝下・胸部・背中（肩甲骨より上/下）・腰部・臀部・腹部（※コース契約の部位以外は使用不可）。"
+  },
+  "faq_risks": {
+    "result": "やけど、硬毛化、毛嚢炎、色素沈着、赤みなどが報告されています。通常は数日で改善しますが、症状が続く場合は医師にご相談ください。"
   }
 }
