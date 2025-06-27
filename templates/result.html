@@ -49,17 +49,17 @@
         {% if question %}
             <div class="question">{{ question }}</div>
             {% for option in options %}
-                <a href="{{ url_for('question', key=option.next) }}" class="option-btn">
+                <a href="{{ url_for('question', qid=option.next) }}" class="option-btn">
                     {{ option.text }}
                 </a>
             {% endfor %}
         {% elif result %}
             <div class="answer">{{ result|safe }}</div>
             <br>
-            <a href="{{ url_for('question', key='start') }}" class="option-btn">最初に戻る</a>
+            <a href="{{ url_for('question', qid='start') }}" class="option-btn">最初に戻る</a>
         {% else %}
             <div>データが見つかりませんでした。</div>
-            <a href="{{ url_for('question', key='start') }}" class="option-btn">最初に戻る</a>
+            <a href="{{ url_for('question', qid='start') }}" class="option-btn">最初に戻る</a>
         {% endif %}
     </div>
 </body>
