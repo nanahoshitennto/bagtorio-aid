@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>診断チャット</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-box">
+        <h2>{{ question }}</h2>
+        <form method="POST">
+            {% for option in options %}
+                <button type="submit" name="next" value="{{ option.next }}">{{ option.text }}</button><br>
+            {% endfor %}
+        </form>
+    </div>
+</body>
+</html>
