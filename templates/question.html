@@ -2,15 +2,53 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>診断チャット</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>診断質問</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f5f8fb;
+            padding: 2em;
+            color: #111;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 1.4em;
+            margin-bottom: 1.5em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2em;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1em;
+            padding: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+    </style>
 </head>
 <body>
-    <div class="chat-box">
-        <h2>{{ question }}</h2>
-        <form method="POST">
-            {% for option in options %}
-                <button type="submit" name="next" value="{{ option.next }}">{{ option.text }}</button><br>
+    <div class="container">
+        <h1>{{ question }}</h1>
+        <form method="post">
+            {% for opt in options %}
+                <button type="submit" name="next" value="{{ opt.next }}">{{ opt.text }}</button>
             {% endfor %}
         </form>
     </div>

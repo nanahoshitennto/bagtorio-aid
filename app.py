@@ -3,6 +3,7 @@ import json
 
 app = Flask(__name__)
 
+# 質問読み込み
 with open("questions.json", encoding="utf-8") as f:
     questions = json.load(f)
 
@@ -22,7 +23,9 @@ def question(qid):
         return "質問が見つかりません", 404
 
     if "result" in current:
-        return render_template("result.html", result=current["result"])
+        # resultが指定された場合はテンプレートへメッセージを渡す
+        result_message = current["result"]
+        return render_template("result.html", result_message=result_message)
 
     return render_template("question.html", qid=qid, question=current["question"], options=current["options"])
 

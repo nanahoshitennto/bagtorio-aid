@@ -3,13 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>診断結果</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f8fc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background-color: white;
+            margin: 80px auto;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        h2 {
+            color: #007bff;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        .message {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.8;
+            word-break: break-word;
+            white-space: normal;
+            margin-bottom: 30px;
+        }
+        .back-button {
+            background-color: #007bff;
+            color: white;
+            padding: 14px 0;
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <div class="chat-box">
+    <div class="container">
         <h2>診断結果</h2>
-        <p>{{ result }}</p>
-        <a href="{{ url_for('index') }}">最初に戻る</a>
+        <div class="message">{{ result_message|safe }}</div>
+        <a class="back-button" href="{{ url_for('index') }}">最初に戻る</a>
     </div>
 </body>
 </html>
